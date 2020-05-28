@@ -226,8 +226,8 @@ document.addEventListener('touchend',function(event){
     }
 });
 
-if (document.DeviceOrientationEvent) {
-document.addEventListener('deviceorientation',function(event){
+//if (document.DeviceOrientationEvent) {
+window.addEventListener('deviceorientation',function(event){
     gamma = event.gamma;
     beta = event.beta;
     
@@ -261,7 +261,7 @@ document.addEventListener('deviceorientation',function(event){
                 }
 	}
 });
-}
+//}
 
 
 function isGameover(){
