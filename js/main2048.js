@@ -230,53 +230,48 @@ document.addEventListener('touchend',function(event){
 window.addEventListener('deviceorientation',function(event){
     gamma = event.gamma;
     beta = event.beta;
-	
-	//gamma
-	right = 30
-	left = -20
-	//beta
-	down = 60
-	up = -10
+
+    //gamma
+    right = 30
+    left = -20
+    //beta
+    down = 60
+    up = -10
 	
     if(start){
 		if(gamma > right){
 			//向右
-				if(moveRight()){
-						setTimeout("generateOneNumber()",210);
-						setTimeout("isGameover()",300);
-						setTimeout("isWin()",300);
-						start = false;
-					}
+			if(moveRight()){
+				setTimeout("generateOneNumber()",210);
+				setTimeout("isGameover()",300);
+				setTimeout("isWin()",300);
+				start = false; }
 		}else if(gamma < left){
 			//向左
-				if(moveLeft()){
-						setTimeout("generateOneNumber()",210);
-						setTimeout("isGameover()",300);
-						setTimeout("isWin()",300);
-						start = false;
-					}
+			if(moveLeft()){
+				setTimeout("generateOneNumber()",210);
+				setTimeout("isGameover()",300);
+				setTimeout("isWin()",300);
+				start = false; }
 		}else if(beta > down){
 			//向下
-				if(moveDown()){
-						setTimeout("generateOneNumber()",210);
-						setTimeout("isGameover()",300);
-						setTimeout("isWin()",300);
-						start = false;
-					}
+			if(moveDown()){
+				setTimeout("generateOneNumber()",210);
+				setTimeout("isGameover()",300);
+				setTimeout("isWin()",300);
+				start = false; }
 		}else if(beta < up){
 			//向上
-				if(moveUp()){
-						setTimeout("generateOneNumber()",210);
-						setTimeout("isGameover()",300);
-						setTimeout("isWin()",300);
-						start = false;
-					}
+			if(moveUp()){
+				setTimeout("generateOneNumber()",210);
+				setTimeout("isGameover()",300);
+				setTimeout("isWin()",300);
+				start = false; }
 		}
 	}
 	else{
 		if(gamma<right&&gamma>left&&beta<down&&beta>up){
-			start = true;
-		}
+			start = true; }
 	}
 });
 
